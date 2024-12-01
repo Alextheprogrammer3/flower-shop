@@ -1,0 +1,170 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+    <title>Our Services</title>
+    <style>
+      /* Custom Styles */
+      body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f7fafc;
+        color: #4A4A4A;
+      }
+      h1, h2, h3 {
+        font-family: 'Georgia', serif;
+        color: #333;
+      }
+      .bg-primary {
+        background-color: #f9f9f9;
+      }
+      .container {
+        max-width: 1200px;
+        padding: 1rem;
+      }
+      .hero-bg {
+        background-image: url('/images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+      }
+      .cta-bg {
+        background-image: url('https://ca-times.brightspotcdn.com/dims4/default/1e75d66/2147483647/strip/true/crop/5461x8192+1+0/resize/1200x1800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc7%2Fae%2Fd6e3c0cc46288e2f7a740d62aab9%2Fla-newbies-guide-to-the-l-a-flower-market-004.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+      }
+      .cta-bg h2 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .cta-bg p {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+      .cta-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.8rem 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+      }
+      .cta-btn:hover {
+        background-color: #45a049;
+      }
+      .icon-card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        text-align: center;
+        flex: 1;
+        max-width: 300px;
+      }
+      .icon-card i {
+        font-size: 2.5rem;
+        color: #4CAF50;
+        margin-bottom: 1rem;
+      }
+      .icon-card h5 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+      }
+      .icon-card p {
+        font-size: 1rem;
+        color: #555;
+      }
+      .service-card {
+        background-color: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+        text-align: center;
+        flex: 1;
+        max-width: 350px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 2rem;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      .service-detail-card {
+        border-left: 5px solid #FF4081;
+        padding: 2rem;
+        transition: border-color 0.3s ease;
+      }
+      .service-detail-card:hover {
+        border-color: #4CAF50;
+      }
+      .bg-light-grey {
+        background-color: #f9f9f9;
+      }
+      
+      /* New Image Section Styling */
+      .hero-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+      <div class="container mx-auto px-6">
+        <div class="flex justify-between items-center py-6"><a class="navbar-brand text-black text-3xl font-bold" href="/">Our Services</a>
+          <ul class="flex space-x-8 text-black">
+            <li><a class="hover:text-green-500" href="/">Home</a></li>
+            <li><a class="hover:text-green-500" href="/about">About Us</a></li>
+            <li><a class="hover:text-green-500" href="/services">Services</a></li>
+            <li><a class="hover:text-green-500" href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section with Background Image-->
+    <section class="hero-bg text-center text-white flex items-center justify-center">
+      <h1 class="text-5xl font-semibold">Our Premium Services</h1>
+    </section>
+    <!-- Add New Hero Image that stretches across horizontally-->
+    <section><img class="hero-img" src="https://ca-times.brightspotcdn.com/dims4/default/4c347ec/2147483647/strip/true/crop/4794x3196+0+24/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9e%2Fe3%2F3d38ac02474da53b4d56cd361cdb%2F1482383-wk-los-angeles-flower-market-04-mjc.jpg" alt="Flower Market"/></section>
+  </body>
+</html>
+<!-- Service Section-->
+<section class="container mx-auto mt-8 px-4 bg-light-grey py-12">
+  <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">More About Our Services</h2>
+  <div class="flex flex-wrap justify-center gap-8">
+    <!-- Service Detail Card 1 - Customized Bouquets-->
+    <div class="service-detail-card bg-white p-6 shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative overflow-hidden">
+      <!-- Background Icon (Hidden on small screens)--><i class="fa fa-gift text-primary absolute top-0 left-0 w-full h-full opacity-10 transform scale-150"> </i>
+      <h3 class="text-xl font-bold text-primary mb-4 z-10">Customized Bouquets for Your Special and Unique Occasion</h3>
+      <p class="text-gray-600 mb-4 z-10">We offer custom floral designs that are tailor-made by our team to fit your needs.</p>
+    </div>
+    <!-- Service Detail Card 2 - Flower Arrangements-->
+    <div class="service-detail-card bg-white p-6 shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative overflow-hidden">
+      <!-- Background Icon (Hidden on small screens)--><i class="fa fa-flower absolute top-0 left-0 w-full h-full opacity-10 transform scale-150"> </i>
+      <h3 class="text-xl font-bold text-primary mb-4 z-10">Flower Arrangements</h3>
+      <p class="text-gray-600 mb-4 z-10">Our expert designers will help you create the perfect bouquet for your special occasions.</p>
+    </div>
+    <!-- Service Detail Card 3 - Fast Delivery-->
+    <div class="service-detail-card bg-white p-6 shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 relative overflow-hidden">
+      <!-- Background Icon (Hidden on small screens)--><i class="fa fa-truck absolute top-0 left-0 w-full h-full opacity-10 transform scale-150"> </i>
+      <h3 class="text-xl font-bold text-primary mb-4 z-10">Fast Delivery & Custom Bouquets</h3>
+      <p class="text-gray-600 mb-4 z-10">Enjoy fast delivery of your custom bouquets designed for your specific needs.</p>
+    </div>
+  </div>
+</section>
+<!-- Image Section-->
+<section class="flex flex-wrap justify-center gap-4 mt-8"><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://th.bing.com/th/id/OIP.uVWkHU9N2w6DljOyRux8lwHaHa?rs=1&amp;pid=ImgDetMain" alt="Flower Market"/><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://www.futureventsja.com/wp-content/uploads/2020/05/FE003.jpg" alt="dick"/><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://s3-us-west-2.amazonaws.com/shaadiwishnewbucket/11f87c93-169d-1e4a-66e5-afd0933bcbaa.jpg" alt="ass"/><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://i.pinimg.com/originals/a4/d1/90/a4d190def79851a272c302aff966e692.jpg" alt="Flower Market"/><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://th.bing.com/th/id/R.ff899c4bb28b14aedba7da474546ab25?rik=%2fMKesJM8LLaeJg&amp;riu=http%3a%2f%2fmrstobe.com%2fwp-content%2fuploads%2f2019%2f12%2fAwesome-Floral-Wedding-Decorations-That-Wow-1240661173823796923.jpg&amp;ehk=ZiwtANOavik4baBJw6s9DEcOxTrck7Jnm3EG1o%2bweJg%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0" alt="pussy"/><img class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-auto object-cover rounded-sm" src="https://apis.xogrp.com/media-api/images/d3d35f48-f2e6-11e4-be0a-22000aa61a3e" alt="bitches"/></section>
