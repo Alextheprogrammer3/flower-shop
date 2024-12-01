@@ -13,7 +13,7 @@ if (fs.existsSync(svgPath)) {
 
   // JavaScript concatenation task
   function js() {
-    return src('js/*.js') // Path to your JavaScript files
+    return src('src/static/js/*.js') // Updated path to src/static/js
       .pipe(concat('bouquet.js')) // Concatenate into bouquet.js
       .pipe(dest('dist/js')); // Output folder for the concatenated JavaScript
   }
@@ -40,7 +40,7 @@ if (fs.existsSync(svgPath)) {
   // Watch task (you can define this task to automatically re-run tasks on file changes)
   gulp.task('watch', function() {
     gulp.watch('src/views/**/*.pug', gulp.series('pug')); // Watch Pug files
-    gulp.watch('js/*.js', gulp.series(js)); // Watch JS files
+    gulp.watch('src/static/js/*.js', gulp.series(js)); // Watch JS files in src/static/js
   });
 
 } else {
