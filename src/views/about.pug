@@ -1,0 +1,220 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+    title My Flower Shop | Specialty Roses, Bouquets & More
+
+    style.
+      /* Custom Styling */
+      body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f7fafc;
+        color: #4A4A4A;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      h1, h2, h3, h4, h5 {
+        font-family: 'Georgia', serif;
+        color: #333;
+      }
+
+      .bg-primary {
+        background-color: #f9f9f9;
+      }
+
+      .product-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        background-color: #fff;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-image {
+        border-radius: 0.5rem;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-info {
+        padding-top: 1rem;
+      }
+
+      .product-name {
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: #333;
+        text-decoration: underline;
+        text-underline-offset: auto;
+        text-underline-position: auto;
+      }
+
+      .product-price {
+        font-size: 1.125rem;
+        color: #4CAF50;
+        margin-top: 0.5rem;
+      }
+
+      .category-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #273444;
+        text-wrap-mode: wrap;
+        text-wrap-style: auto;
+      }
+
+      .category-description {
+        color: #6b7280;
+        font-size: 1.125rem;
+        margin-bottom: 3rem;
+      }
+
+      .cta-section {
+        background-color: #4CAF50;
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+        margin-top: 4rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button {
+        background-color: #f9d342;
+        color: #333;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        margin-top: 2rem;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #FF6347;
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+  body(class="bg-gray-100 font-sans")
+    //- Navigation Bar Section
+    nav(class="bg-white shadow-md fixed top-0 left-0 w-full z-10")
+      .container.mx-auto.px-6
+        .flex.justify-between.items-center.py-6
+          a.navbar-brand(href='/', class="text-black text-3xl font-bold") My Flower Shop
+          ul(class="flex space-x-8 text-black")
+            li
+              a(href='/', class="hover:text-green-500") Home
+            li
+              a(href='/products', class="hover:text-green-500") Products
+            li
+              a(href='/about', class="hover:text-green-500") About Us
+            li
+              a(href='/contact', class="hover:text-green-500") Contact Us
+
+    //- Hero Section
+    section(class="hero-bg text-center text-black py-25 bg-cover bg-center" style="background-image: url('https://example.com/hero-image.jpg')")
+      h1(class="text-5xl font-bold mb-4") 
+      p(class="text-xl mb-8") 
+      a(href="#shop-now" class="btn-primary") Shop Now
+
+    //- Large Bouquets Section
+    section(id="large-bouquets" class="container mx-auto py-16 text-center bg-gray-100")
+      h2(class="category-title text-3xl font-bold mb-8") Large Bouquets
+      p(class="category-description text-xl mb-12") Whether it's a birthday, anniversary, or celebration, our large bouquets will make any event unforgettable.
+
+      .flex.flex-wrap.justify-center.gap-12
+        .product-card.transition-card
+          img(src="https://www.avasflowers.net/img/prod_img/avasflowers-center-stage-bouquet.png" alt="Large Bouquet" class="product-image")
+          .product-info
+            h3(class="product-name text-xl font-semibold mt-4") Center Stage Bouquet
+            p(class="product-price text-lg text-gray-700") $120.00
+            a(href="/product/center-stage-bouquet" class="btn-primary mt-2 inline-block") View Details
+
+        .product-card.transition-card
+          img(src="https://kelleynan.com/wp-content/uploads/2016/01/DSC_2103.jpg" alt="Large Floral Arrangement" class="product-image")
+          .product-info
+            h3(class="product-name text-xl font-semibold mt-4") Elegant Floral Arrangement
+            p(class="product-price text-lg text-gray-700") $150.00
+            a(href="/product/elegant-floral-arrangement" class="btn-primary mt-2 inline-block") View Details
+
+        .product-card.transition-card
+          img(src="https://2.bp.blogspot.com/-F9xKBU5nR6o/UQ2Q6C2DSQI/AAAAAAAADK0/oKjP4Q_Ehpk/s1600/IMG_2679.JPG" alt="Celebration Blooms" class="product-image")
+          .product-info
+            h3(class="product-name text-xl font-semibold mt-4") Celebration Blooms
+            p(class="product-price text-lg text-gray-700") $135.00
+            a(href="/product/celebration-blooms" class="btn-primary mt-2 inline-block") View Details
+
+    //- Funeral Flowers Section
+section(id="funeral-flowers" class="container mx-auto py-16 text-center")
+  h2(class="category-title text-3xl font-bold mb-8") Funeral Flowers
+  p(class="category-description text-xl mb-12") Our respectful funeral arrangements help honor the lives of your loved ones with grace and beauty.
+
+  .flex.flex-wrap.justify-center.gap-12
+    .product-card.transition-card
+      img(src="https://i.pinimg.com/originals/46/db/3b/46db3b46359b26827c3a66e8f6e9ba53.png" alt="Funeral Flowers" class="product-image")
+      .product-info
+        h3(class="product-name") Peaceful Tribute
+        p(class="product-price") $85.00
+        a(href="/product/peaceful-tribute" class="btn-primary") View Details
+
+    .product-card.transition-card
+      img(src="https://i.pinimg.com/originals/ae/06/ab/ae06aba35190044f7ec29029554c5a1e.jpg" alt="Funeral Wreath" class="product-image")
+      .product-info
+        h3(class="product-name") Serenity Bouquet
+        p(class="product-price") $95.00
+        a(href="/product/serenity-bouquet" class="btn-primary") View Details
+
+    .product-card.transition-card
+      img(src="https://cdn.shopify.com/s/files/1/1624/2955/products/IMG_20180714_083423_579b4788-a49f-4385-a5fc-1ed714415911.jpg?v=1531714218" alt="Casket Spray" class="product-image")
+      .product-info
+        h3(class="product-name") Eternal Love Tribute
+        p(class="product-price") $125.00
+        a(href="/product/eternal-love-tribute" class="btn-primary") View Details
+
+   
+
+//- Specialty Flowers Section
+section(id="specialty-flowers" class="container mx-auto py-16 text-center")
+  h2(class="category-title text-3xl font-bold mb-8") Specialty Flowers
+  p(class="category-description text-xl mb-12") Explore our unique selection of specialty flowers, perfect for any occasion.
+
+  .flex.flex-wrap.justify-center.gap-12
+    .product-card.transition-card
+      img(src="https://i.etsystatic.com/15363648/r/il/352fbe/2299299742/il_1588xN.2299299742_8qqf.jpg" alt="Specialty Rose" class="product-image")
+      .product-info
+        h3(class="product-name") Orchid Majesty
+        p(class="product-price") $175.00
+        a(href="/product/orchid-majesty" class="btn-primary") View Details
+
+    .product-card.transition-card
+      img(src="https://i.etsystatic.com/12394706/r/il/f457bf/3243363680/il_1588xN.3243363680_6s4t.jpg" alt="Specialty Rose" class="product-image")
+      .product-info
+        h3(class="product-name") Elegant Rose Ensemble
+        p(class="product-price") $145.00
+        a(href="/product/elegant-rose-ensemble" class="btn-primary") View Details
+
+    .product-card.transition-card
+      img(src="https://www.literaryhealingarts.com/wp-content/uploads/tall-vase-floral-arrangements-of-green-centerpieces-artificial-flower-centerpieces-outstanding-floral-with-regard-to-flowers-in-centerpieces-0d-flower-green-centerpieces-wedding-wedding-flow.jpg" alt="Specialty Green Floral Arrangement" class="product-image")
+      .product-info
+        h3(class="product-name") Tropical Bliss
+        p(class="product-price") $180.00
+        a(href="/product/tropical-bliss" class="btn-primary") View Details

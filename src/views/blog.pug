@@ -1,0 +1,529 @@
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Interactive Bouquet Builder Blog
+    // Link to Bootstrap for styling
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css")
+    // Link to FontAwesome for icons
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", rel="stylesheet")
+    // Link to your custom styles if needed
+    link(rel="stylesheet", href="/styles.css")
+    style.
+      /* Custom Styling */
+      body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f7fafc; /* Light background */
+        color: #4A4A4A;
+        line-height: 1.6;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Georgia', serif;
+        color: #333;
+      }
+      p {
+        color: #5A5A5A;
+        margin-bottom: 1.5rem;
+      }
+      .bg-primary {
+        background-color: #f9f9f9;
+      }
+      .bg-light-grey {
+        background-color: #f7fafc;
+      }
+      .text-gray-600 {
+        color: #5A5A5A;
+      }
+      .text-gray-700 {
+        color: #5A5A5A;
+      }
+      .text-gray-800 {
+        color: #333;
+      }
+      .container {
+        max-width: 1200px;
+      }
+      .btn-primary {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #45a049;
+      }
+      .shadow-lg {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .rounded-lg {
+        border-radius: 0.5rem;
+      }
+      .icon-style {
+        color: #fff;
+        padding: 1rem;
+        border-radius: 50%;
+        background-color: #4CAF50;
+      }
+      .hero-bg {
+        background-image: url('/images/hero-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+      }
+      .section-padding {
+        padding: 4rem 2rem;
+      }
+      .section-heading {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 2rem;
+      }
+      .icon-section {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 3rem;
+      }
+      .icon-card {
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        text-align: center;
+        flex: 1;
+        max-width: 300px;
+      }
+      .icon-card i {
+        font-size: 2.5rem;
+        color: #4CAF50;
+        margin-bottom: 1rem;
+      }
+      .icon-card h5 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+      }
+      .icon-card p {
+        font-size: 1rem;
+        color: #555;
+      }
+      .blog-post {
+        background-color: #fff;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #4CAF50;
+        overflow: hidden; /* Prevent any overflow */
+      }
+      .blog-post h3 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 1rem;
+      }
+      .blog-post h4, .blog-post h5, .blog-post h6 {
+        color: #4CAF50;
+        margin-top: 1.5rem;
+      }
+      .blog-post ul {
+        margin-left: 1.5rem;
+        list-style-type: disc;
+      }
+      footer {
+        background-color: #f9f9f9;
+        padding: 1.5rem 0;
+        text-align: center;
+        color: #333;
+      }
+      footer p {
+        margin: 0;
+      }
+
+  body
+    // Navbar
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container
+        a.navbar-brand(href="/") Interactive Bouquet Builder
+        button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarNav
+          ul.navbar-nav
+            li.nav-item
+              a.nav-link(href="/") Home
+            li.nav-item
+              a.nav-link(href="/bouquet") Build Bouquet
+            li.nav-item
+              a.nav-link(href="/about") About Us
+            li.nav-item
+              a.nav-link(href="/blog") Blog
+
+    // Main content area for Blog
+.container.mt-4
+  h2 Blog - Floral Arranging Tips & Guides
+
+  // Post 1: DIY Floral Arranging at the L.A. Flower District
+  .blog-post
+    .row
+      .col-md-6
+        img(src="https://hellomay.com.au/wp-content/uploads/2019/05/Bridal-bouquet-Insporation-wedding-flowers-florist-roses-dried-bouquet_1-1120x1665.jpg", alt="DIY Floral Arranging at the L.A. Flower District", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+      .col-md-6
+        .post-meta
+          p.text-muted 
+            | By 
+            strong Alex Hernandez 
+            |  | Posted on 
+            strong 12th November 2024
+            |  | at 
+            strong 10:30 AM
+        h3 DIY Floral Arranging at the L.A. Flower District: A Beginner's Guide
+        p The L.A. Flower District is a paradise for DIY floral enthusiasts, but it can be overwhelming for first-timers. In this guide, I’ll walk you through the steps to make the most out of your visit, select the best flowers, and arrange them into stunning designs.
+
+        h4 Navigating the Flower District Like a Pro
+        p The Flower District is home to over 70 vendors, but don’t let that intimidate you! Start by creating a rough plan for what you need, and feel free to chat with the vendors about what's in season and available. Pro tip: Go early in the morning to get the freshest selections.
+
+        h4 How to Build Your Budget-Friendly Floral Creation
+        p By buying flowers in bulk, you can save a lot of money compared to purchasing from a florist. Here’s how to plan your purchase:
+        ul
+          li Main flowers: 3-4 dozen roses ($150)
+          li Filler flowers: Baby’s breath, amaranth ($50)
+          li Miscellaneous: Floral food, vases, and ribbons ($20)
+        
+        h4 At-Home Flower Care
+        p Once you get your flowers home, it’s essential to keep them fresh. Trim stems at an angle, place them in water with floral food, and avoid placing them in direct sunlight. This ensures your flowers stay vibrant until you're ready to arrange them.
+
+  // Post 2: Seasonal Flowers
+  .blog-post
+    .row
+      .col-md-6
+        img(src="https://everythingbackyard.net/wp-content/uploads/2016/11/1_garden-surrounded-by-many-types-of-colorful-flowers.jpg", alt="Best Flowers for Seasonal Arrangements", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+      .col-md-6
+        .post-meta
+          p.text-muted 
+            | By 
+            strong Alex Hernandez 
+            |  | Posted on 
+            strong 12th November 2024
+            |  | at 
+            strong 10:30 AM
+        h3 How to Choose the Best Flowers for Your Seasonal Arrangement
+        p Choosing seasonal flowers makes a huge difference in the quality and longevity of your arrangements. Here’s a breakdown of which blooms are best for each season and how to arrange them effectively.
+
+        h4 Spring: Bright and Fresh Blooms
+        p Spring is all about light, airy colors and fragrant flowers. Think about tulips, lilacs, and peonies. These flowers pair beautifully with fresh greenery like ferns and ivy for a classic, crisp arrangement.
+
+        h4 Summer: Bold and Vibrant
+        p Summer flowers like sunflowers, dahlias, and zinnias thrive in hot weather. These flowers have a bold presence and can handle the heat. When arranging, use a mix of high-contrast colors to create a lively vibe.
+
+        h4 Fall: Warmth and Texture
+        p Fall is perfect for creating rich, textured arrangements. Chrysanthemums, marigolds, and asters bring a warm, cozy feel. Mixing these with rustic elements like pinecones, branches, and berries adds an earthy charm.
+
+        h4 Winter: Elegant and Simple
+        Winter flowers like poinsettias, amaryllis, and camellias bring a sense of elegance and calm. Keep arrangements simple but impactful, using greenery as a backdrop to highlight the rich blooms.
+
+  // Post 3: Wedding Bouquet Tips
+  .blog-post
+    .row
+      .col-md-6
+        img(src="https://ca-times.brightspotcdn.com/dims4/default/4e79d26/2147483647/strip/true/crop/5059x7589+0+0/resize/1200x1800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe0%2F9d%2F639db81b4618a8383ee2b6f539a0%2Fla-newbies-guide-to-the-l-a-flower-market-001.jpg", alt="L.A. Flower Market", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+      .col-md-6
+        .post-meta
+          p.text-muted 
+            | By 
+            strong John Doe
+            |  | Posted on 
+            strong 10th November 2024
+            |  | at 
+            strong 9:15 AM
+        h3 Wedding Bouquet Tips
+        p Weddings are a special occasion, and your bouquet should reflect the beauty of the day. This post is all about selecting flowers that match the bride's style, personality, and wedding theme.
+
+        h4 Finding Your Perfect Flower Match
+        p Begin with the bride's vision. Is it romantic and classic, boho and whimsical, or modern and minimalist? Choose flowers that complement the wedding dress and the overall mood of the event. Roses and peonies are timeless, but don’t be afraid to explore unique blooms like orchids or wildflowers.
+
+        h4 Arrangement Styles
+        p For a traditional look, go for a round, symmetrical bouquet. For something more avant-garde, try asymmetry with mixed textures. This modern look is perfect for brides who want to stand out.
+
+        h4 Incorporating Personal Touches
+        p Add something meaningful to the bouquet, such as a charm with the couple's initials, a piece of lace from the bride's gown, or a unique flower that has personal significance. This adds an intimate and personalized touch to the wedding day.
+
+  // Post 4: How to Make a DIY Floral Centerpiece for Your Dinner Table
+  .blog-post
+    .row
+      .col-md-6
+        img(src="https://www.jennasuedesign.com/wp-content/uploads/2020/12/DIY-floral-arrangement-centerpiece.jpg", alt="DIY Floral Centerpiece", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+      .col-md-6
+        .post-meta
+          p.text-muted 
+            | By 
+            strong Alex Hernandez 
+            |  | Posted on 
+            strong 16th November 2024
+            |  | at 
+            strong 2:00 PM
+        h3 How to Make a DIY Floral Centerpiece for Your Dinner Table
+        p Whether it’s for a casual dinner or a more formal event, creating your own floral centerpiece adds a personal touch to any table setting. Here’s how to do it from scratch.
+
+        h4 Start with a Statement Vase
+        p Choose a vase that suits your table’s aesthetic. A wide, shallow vase works best for creating a low and lush arrangement that doesn’t obstruct guests’ views.
+
+        h4 Flower Selection
+        p Pick flowers that either complement or contrast with the colors of your table setting. Soft pastels pair well with neutral tableware, while bold tones like red and yellow stand out in a vibrant setting.
+
+        h4 Add Greenery and Texture
+        p Fill the base of the vase with greenery like eucalyptus, ferns, or ivy. Then, add your focal flowers, followed by smaller filler blooms. Use an odd number of flowers (like 5 or 7) for a balanced look.
+
+  // Post 5: Flower Arranging Tips for Beginners
+  .blog-post
+    .row
+      .col-md-6
+        img(src="https://www.thesprucecrafts.com/thmb/_gOwZYzAhz9QkRgz-Urw25tdHws=/1500x1000/filters:fill(auto,1)/easy-flower-arranging-for-beginners-d4215502c8ab4930b12e26875ab735c6.jpg", alt="Flower Arranging for Beginners", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+      .col-md-6
+        .post-meta
+          p.text-muted 
+            | By 
+            strong Alex Hernandez 
+            |  | Posted on 
+            strong 21st November 2024
+            |  | at 
+            strong 2:00 PM
+        h3 Flower Arranging Tips for Beginners
+        p If you're new to floral arranging, don’t worry! You don’t need to be a professional to create beautiful designs. Here are some tips that will help you get started and improve your floral skills.
+
+        h4 Choosing the Right Flowers
+        p Start by selecting a few different types of flowers—some with bold colors, others with subtle tones. Try combining flowers that vary in size, shape, and texture to create interest in your arrangement.
+
+        h4 Preparing the Flowers
+        p Trim the stems at an angle to allow them to absorb water better. Remove any leaves that will be submerged in water to avoid bacterial growth. Fresh flowers can last a week or more with the right care.
+
+        h4 Creating Your First Arrangement
+        p Start simple! Create a small arrangement using just three flowers. Place the largest flower in the center and arrange the smaller ones around it. Practice keeping the flowers at different heights for a dynamic look.
+
+
+
+      // Post 5: How to Make a DIY Floral Centerpiece for Your Dinner Table
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.jennasuedesign.com/wp-content/uploads/2020/12/DIY-floral-arrangement-centerpiece.jpg", alt="DIY Floral Centerpiece", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 16th November 2024
+                |  | at 
+                strong 2:00 PM
+            h3 How to Make a DIY Floral Centerpiece for Your Dinner Table
+            p Creating a beautiful floral centerpiece for your dinner table can set the mood for any occasion. Here’s how you can create one from scratch.
+            h4 Step 1: Choose a Low, Wide Vase
+            p Opt for a shallow vase that can hold multiple flowers without the arrangement feeling too tall or overpowering.
+            h4 Step 2: Pick Flowers in Complementary Colors
+            p Choose flowers that match your table setting. Soft pastels like blush pinks and whites are great for elegant settings, while bold reds and yellows can create a lively atmosphere.
+            h4 Step 3: Fill with Greenery and Filler Flowers
+            p Use greenery like eucalyptus or ferns as a base, and then add smaller filler flowers to give the arrangement volume and texture.
+            p Visit our product page for more ideas and materials to create your centerpiece.
+
+      // Post 6: The Best Flowers for a Summer Wedding
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.verywellfamily.com/thmb/tJp4DnoYcEdxdDWpDX0cmh71BY0=/4500x3000/filters:fill(auto,1)/summer-wedding-flowers-107561643-5c7c25e6c9e77c0001c26bb6.jpg", alt="Summer Wedding Flowers", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 17th November 2024
+                |  | at 
+                strong 10:15 AM
+            h3 The Best Flowers for a Summer Wedding
+            p Summer weddings are filled with sunshine, warmth, and beautiful floral designs. Here’s how to select the best blooms for a stunning summer wedding bouquet.
+            h4 Step 1: Go for Bright and Bold Colors
+            p Summer flowers like sunflowers, zinnias, and dahlias thrive in bold, vibrant hues. Choose flowers that pop against the backdrop of your wedding venue.
+            h4 Step 2: Include Seasonal Blooms
+            p Summer offers a variety of flowers that bloom at the perfect time for a wedding. Use lilies, peonies, and lavender for a fragrant and full bouquet.
+            h4 Step 3: Layer with Greens
+            p Use greenery such as ivy, eucalyptus, or ferns to add structure to the bouquet and create a natural, organic feel.
+            p Explore our wedding flower section for specific bouquets and flowers designed for summer events.
+
+      // Post 7: How to Create a Boho-Style Floral Arrangement
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.loveandlavender.com/wp-content/uploads/2020/11/Boho-Wedding-Flowers-3-1000x667.jpg", alt="Boho Style Floral Arrangement", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 18th November 2024
+                |  | at 
+                strong 12:00 PM
+            h3 How to Create a Boho-Style Floral Arrangement
+            p Boho-style floral arrangements are all about relaxed, natural beauty. Here's how to design your own boho bouquet or arrangement.
+            h4 Step 1: Select Wildflowers and Natural Greens
+            p Choose flowers with an untamed, whimsical look. Wildflowers, grasses, and feathers are essential for this style.
+            h4 Step 2: Mix Textures
+            p Combine a variety of textures—think soft dahlias mixed with spiky thistles or fluffy ferns. This variety creates visual interest.
+            h4 Step 3: Play with Asymmetry
+            p Boho arrangements often have an asymmetrical design. Avoid symmetry and allow the flowers to spill and cascade naturally.
+            p Use our custom bouquet builder to experiment with different boho flower combinations!
+
+      // Post 8: How to Care for Fresh Cut Flowers
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.abc.net.au/cm/rimage/15301786-16x9-xlarge.jpg", alt="Caring for Fresh Cut Flowers", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 19th November 2024
+                |  | at 
+                strong 9:00 AM
+            h3 How to Care for Fresh Cut Flowers
+            p Keeping your fresh flowers looking beautiful for as long as possible requires proper care. Follow these simple steps to extend their lifespan.
+            h4 Step 1: Trim the Stems
+            p Always trim the stems at a 45-degree angle before placing them in water. This helps them absorb water more efficiently.
+            h4 Step 2: Use Clean Water
+            p Clean, cool water is essential. Make sure to change the water every two days and add floral food to nourish the stems.
+            h4 Step 3: Keep Them Cool
+            p Place your flowers in a cool, shady area away from direct sunlight or drafts. Heat can cause flowers to wilt faster.
+            p Learn more about flower preservation products on our site.
+
+      // Post 10: Flower Arranging Tips for Beginners
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.thesprucecrafts.com/thmb/_gOwZYzAhz9QkRgz-Urw25tdHws=/1500x1000/filters:fill(auto,1)/easy-flower-arranging-for-beginners-d4215502c8ab4930b12e26875ab735c6.jpg", alt="Flower Arranging for Beginners", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 21st November 2024
+                |  | at 
+                strong 2:00 PM
+            h3 Flower Arranging Tips for Beginners
+            p Flower arranging can be intimidating, but with a few simple tips, anyone can create beautiful bouquets and arrangements.
+            h4 Step 1: Start with a Simple Vase
+            p Begin with a simple, medium-sized vase and focus on a few types of flowers. This will keep your design simple and elegant.
+            h4 Step 2: Focus on Symmetry
+            p Start by arranging flowers symmetrically. Once you’re comfortable, you can experiment with more dynamic designs.
+            h4 Step 3: Add Filler Flowers
+            p Filler flowers like baby's breath or solidago add fullness and balance to your arrangement.
+            p Explore our flower arranging guides for more detailed step-by-step tutorials.
+               // Post 21: How to Create a Luxurious Floral Arrangement Using Our Bouquet Builder
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://floralschool.univer.se/_assets/74bd64ea-a1ac-4366-bf2c-0fe1623b9a91?auto=compress,format&q=60&w=2250&fit=crop", alt="Luxury Floral Arrangement", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 2nd December 2024
+                |  | at 
+                strong 12:00 PM
+            h3 How to Create a Luxurious Floral Arrangement Using Our Bouquet Builder
+            p Creating a luxurious floral arrangement begins with selecting the finest flowers and blending them into a beautiful design. The **Bouquet Builder** makes it easy to craft elegant arrangements at your fingertips.
+            h4 Step 1: Select Premium Flowers with the Bouquet Builder
+            p Use the **Bouquet Builder** to browse our curated collection of premium flowers like orchids, roses, and peonies. Drag and drop flowers into your virtual bouquet to experiment with different flower types.
+            h4 Step 2: Arrange Your Focal Flowers
+            p After selecting your base flowers, use the Bouquet Builder’s layout tools to position larger focal flowers first. Adjust the size, height, and positioning to create a balanced structure.
+            h4 Step 3: Experiment with Color Harmony
+            p Try different color combinations within the Bouquet Builder to ensure a sophisticated palette. Pair jewel tones with soft pastels or experiment with rich monochromes.
+            h4 Step 4: Add Special Touches
+            p Once you're happy with your layout, add extra luxurious accents like silk ribbons or decorative branches, available in the "Accessories" tab. These small touches elevate your arrangement to perfection.
+            p Create your own luxurious arrangement today using our **Bouquet Builder** tool!
+
+      // Post 22: Crafting a Statement Floral Arrangement for Your Special Event Using the Bouquet Builder
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://images.unsplash.com/photo-1615463366310-c5600d1beb28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Njc0OTV8MHwxfHNlYXJjaHw5fHxmbG93ZXJzaG9wfGVufDB8fHx8MTczMjkxODc4N3ww&ixlib=rb-4.0.3&q=85", alt="Statement Floral Arrangement", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 3rd December 2024
+                |  | at 
+                strong 1:30 PM
+            h3 Crafting a Statement Floral Arrangement for Your Special Event Using the Bouquet Builder
+            p Whether it's for a wedding, corporate event, or milestone celebration, creating a statement floral arrangement is a great way to make an impression. With the **Bouquet Builder**, you can design a bold and dramatic centerpiece in minutes.
+            h4 Step 1: Choose a Bold Focal Flower
+            p Start by selecting large, striking flowers such as a king protea or vibrant orchids. Use the **Bouquet Builder** to adjust their size and placement so they form the focal point of your arrangement.
+            h4 Step 2: Play with Height and Movement
+            p Utilize the **height adjuster** in the Bouquet Builder to create a dynamic arrangement. Place tall flowers like delphiniums or lilies in the back and let shorter blooms like ranunculus or tulips fill in the lower layers.
+            h4 Step 3: Add Dramatic Color Contrast
+            p Experiment with colors using the **Color Palette Tool** in the Bouquet Builder. Try contrasting hues, such as deep reds paired with bright oranges, or rich purples alongside gold-toned accents.
+            h4 Step 4: Incorporate Unexpected Materials
+            p Go beyond traditional flowers by adding unconventional elements like feathers, branches, or even twigs. The **Accessories Tab** in the Bouquet Builder offers a wide selection of materials to give your arrangement an avant-garde flair.
+            p Start designing your statement floral arrangement with our **Bouquet Builder** today and see how easy it is to bring your vision to life!
+
+      // Post 23: Preserve the Freshness of Your Floral Arrangement with the Bouquet Builder’s Customization Options
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://floralschool.univer.se/_assets/1c45b8ac-372a-4a03-bb03-748a8351f537?auto=compress,format&q=60&w=2250&fit=crop", alt="Preserving Fresh Flowers", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 4th December 2024
+                |  | at 
+                strong 9:00 AM
+            h3 Preserve the Freshness of Your Floral Arrangement with the Bouquet Builder’s Customization Options
+            p While creating a beautiful floral arrangement is important, ensuring its longevity is key to keeping it fresh. The **Bouquet Builder** tool not only helps with the design but also offers features to help you optimize your arrangement for longer-lasting beauty.
+            h4 Step 1: Use the Builder to Choose Long-Lasting Flowers
+            p Select flowers that naturally last longer, such as carnations, chrysanthemums, and lilies. The **Bouquet Builder** lets you see how these flowers complement each other and how their longevity can be enhanced by your arrangement’s design.
+            h4 Step 2: Optimize Water Use with Stems and Arrangement Type
+            p The **Bouquet Builder** also allows you to customize your arrangement type—whether it's a vase arrangement, centerpiece, or wreath—each design has a different water and care requirement. Choose designs that allow more water access to the stems for maximum freshness.
+            h4 Step 3: Visualize Flower Placement and Water Flow
+            p Use the **Bouquet Builder’s layering tool** to ensure that flowers are arranged in a way that maximizes their exposure to water. Keep delicate flowers near the outer edge of the arrangement, where they will receive optimal hydration.
+            h4 Step 4: Preview and Adjust the Design for Easy Maintenance
+            p The Bouquet Builder offers a preview mode that helps you visualize the entire arrangement. Adjust flower placement and remove any elements that may inhibit water flow or block the stems from absorbing water.
+            p Design your long-lasting floral arrangements with our **Bouquet Builder** to preserve freshness for longer.
+
+      // Post 24: How to Create Sustainable Floral Arrangements Using the Bouquet Builder
+      .blog-post
+        .row
+          .col-md-6
+            img(src="https://www.greenliving.com/images/sustainable-floral-arrangement.jpg", alt="Sustainable Floral Arrangement", class="img-fluid rounded-lg", style="width: 100%; height: auto;")
+          .col-md-6
+            .post-meta
+              p.text-muted 
+                | By 
+                strong Alex Hernandez 
+                |  | Posted on 
+                strong 6th December 2024
+                |  | at 
+                strong 4:00 PM
+            h3 How to Create Sustainable Floral Arrangements Using the Bouquet Builder
+            p Making sustainable choices in floral design is more important than ever. With the **Bouquet Builder**, you can create beautiful eco-friendly floral arrangements while supporting sustainability.
+            h4 Step 1: Choose Local, Seasonal Flowers
+            p The **Bouquet Builder** allows you to filter flowers based on seasonality and location. Select local blooms to reduce transportation costs and the carbon footprint associated with importing flowers.
+            h4 Step 2: Opt for Eco-Friendly Materials
+            p Avoid floral foam by choosing natural alternatives available in the **Accessories Section** of the **Bouquet Builder**. Use coconut fiber or biodegradable foam to secure your flowers.
+            h4 Step 3: Experiment with Recyclable Containers
+            p In the **Bouquet Builder**, you can explore various container options made from recycled or sustainable materials like bamboo, glass, and ceramics, perfect for a sustainable design.
+            h4 Step 4: Reuse and Recycle Flowers
+            p Once your flowers begin to fade, consider reusing them in your next design. The **Bouquet Builder** lets you easily save designs, allowing you to repurpose flowers and materials for future arrangements.
+            p Start creating your sustainable floral arrangements today with the **Bouquet Builder** and help make a positive impact on the planet.
+

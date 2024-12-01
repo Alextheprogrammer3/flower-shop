@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css")
+    title My Wonderful Bouquet Arrangements
+
+  body(class="bg-gray-100 font-sans")
+    nav(class="bg-white shadow-md fixed top-0 left-0 w-full z-10")
+      .container.mx-auto.px-6
+        .flex.justify-between.items-center.py-6
+          a.navbar-brand(href='/', class="text-black text-3xl font-bold") My Wonderful Bouquet
+          ul(class="flex space-x-8 text-black")
+            li
+              a(href='/', class="hover:text-green-500") Home
+            li
+              a(href='/about', class="hover:text-green-500") About Us
+            li
+              a(href='/services', class="hover:text-green-500") Services
+            li
+              a(href='/contact', class="hover:text-green-500") Contact Us
+section(class="text-center py-24 bg-cover bg-center" style="background-image: url('https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto,w_1400/v1731463417/vendor/7778/catalog/product/2/0/20241112180334_file_67339876d4b8f'); padding: 300px; border: 5px solid #d1d5db; border-radius: 8px; margin-top: 100px;")
+  .container.mx-auto
+    h1(class="text-6xl font-extrabold text-white mb-6") My Wonderful Bouquet Arrangements
+    p(class="text-2xl text-white mb-12") Elegant, Custom Bouquets for All Occasions
+    a(href='/bouquet', class="bg-white text-green-500 py-3 px-6 rounded-full text-lg hover:bg-gray-200 transition duration-300 inline-block") Start Building Your Bouquet
+
+// SVG content to be injected here
+!= svg
+
+p(class="text-center text-gray-800 text-xl mb-8") Pomona Florist - The best place for Flowers, Chocolates, and Gifts
+
+section(class="py-16 bg-white")
+  .container.mx-auto
+    h2(class="text-4xl font-semibold text-gray-800 mb-8") Welcome to Our Bouquet Services!
+    p(class="text-lg text-gray-600 mb-8") We specialize in creating custom flower arrangements for weddings, birthdays, anniversaries, and any special occasion. Whether you’re planning a large event or just want to brighten someone's day, we’ve got the perfect bouquet for you.
+    a(href='/bouquet', class="bg-green-500 text-white py-3 px-6 rounded-full text-lg hover:bg-gray-200 transition duration-300 inline-block") Start Building Your Bouquet
+
+// Blog Posts Section
+section(class="py-16 bg-white")
+  .container.mx-auto
+    h3(class="text-5xl font-bold text-gray-600 mb-8") Blog Posts
+    p(class="text-center text-gray-800 text-xl mb-8") There's so much more to know, check out our blog
+
+    // Blog Description Section
+    p(class="text-lg text-gray-600 mb-8")
+      | Other markets have their own parking structures and there are other parking lots around them, charging about $10 to $12, depending on the day. (Most only accept cash.)
+      | You’ll definitely get your steps in visiting these markets, so if you have to go alone, bring a wagon or cart to carry all your flowers, because even a couple of those paper-wrapped flower cones quickly get unwieldy as you’re walking around.
+      | And try to keep them upright, so they don’t get smooshed by the other bundles while you‘re making your rounds.
+
+    p(class="text-lg text-gray-600 mb-8")
+      | Flower-arranging expert Linda Prendergast recommends pre-soaking by putting your freshly cut stems in warm (not hot) water for 12 to 24 hours before you start your arrangements, with Floral Life Crystal Clear flower food added to the water to keep them well hydrated and looking fresh. (You can also find Floral Life products at the wholesale accessory stores.)
+
+    a(href="/blog")
+      button(class="bg-green-500 text-white py-3 px-6 rounded-full text-lg hover:bg-gray-200 transition duration-300")
+        | Read More

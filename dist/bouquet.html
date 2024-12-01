@@ -1,0 +1,102 @@
+
+<!-- layout.pug--><!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive Bouquet Builder</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container"><a class="navbar-brand" href="/">Interactive Bouquet Builder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/bouquet">Build Bouquet</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-4">
+      <div class="container mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <h1 class="text-3xl font-bold text-center mb-6">Bouquet Builder</h1>
+        <p class="text-lg text-center mb-4">Welcome to our bouquet generator! Design and customize your bouquets with ease.</p>
+        <div class="section mb-6">
+          <label class="block text-xl font-medium" for="flower-select">Select Flower:</label>
+          <select class="form-select mt-2 w-full p-3 border rounded-lg" id="flower-select">
+            <option value="" disabled selected>Select a flower</option>
+            <option value="Roses">Roses</option>
+            <option value="Tulips">Tulips</option>
+            <option value="Lilies">Lilies</option>
+            <option value="Daisies">Daisies</option>
+            <option value="Orchids">Orchids</option>
+          </select>
+        </div>
+        <div class="section mb-6">
+          <label class="block text-xl font-medium" for="quantity">Quantity:</label>
+          <input class="form-input mt-2 w-full p-3 border rounded-lg" type="number" id="quantity" min="1" placeholder="Enter quantity" aria-label="Enter flower quantity">
+        </div>
+        <div class="section mb-6">
+          <p class="text-xl font-medium">Select Color:</p>
+          <div class="flex items-center" id="color-options">
+            <div class="radio-group">
+              <label class="mr-6">
+                <input class="color-radio" type="radio" name="color" value="Red">Red
+              </label>
+              <label class="mr-6">
+                <input class="color-radio" type="radio" name="color" value="White">White
+              </label>
+              <label class="mr-6">
+                <input class="color-radio" type="radio" name="color" value="Pink">Pink
+              </label>
+              <label class="mr-6">
+                <input class="color-radio" type="radio" name="color" value="Yellow">Yellow
+              </label>
+              <label class="mr-6">
+                <input class="color-radio" type="radio" name="color" value="Purple">Purple
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="section mb-6">
+          <p class="text-xl font-medium">Select Arrangement:</p>
+          <div id="arrangement-options">
+            <div class="arrangement-option mb-4">
+              <label>
+                <input class="arrangement-radio" type="radio" name="arrangement" value="Bouquet">Bouquet ($5)
+              </label>
+            </div>
+            <div class="arrangement-option mb-4">
+              <label>
+                <input class="arrangement-radio" type="radio" name="arrangement" value="Basket">Basket ($10)
+              </label>
+            </div>
+            <div class="arrangement-option mb-4">
+              <label>
+                <input class="arrangement-radio" type="radio" name="arrangement" value="Boxed Arrangement">Boxed Arrangement ($15)
+              </label>
+            </div>
+            <div class="arrangement-option mb-4">
+              <label>
+                <input class="arrangement-radio" type="radio" name="arrangement" value="Vase Arrangement">Vase Arrangement ($20)
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="section mb-6">
+          <h3 class="text-2xl font-semibold">Bouquet Summary</h3>
+          <div class="text-lg" id="summary">Your bouquet summary will appear here.</div>
+          <p class="text-xl">Total Price: $<span id="total-price">0</span></p>
+        </div>
+        <div class="buttons flex justify-between mt-6">
+          <button class="btn btn-secondary bg-gray-400 hover:bg-gray-500 text-white p-3 rounded-lg" id="reset">Reset</button>
+          <button class="btn btn-success bg-green-500 hover:bg-green-600 text-white p-3 rounded-lg" id="confirm">Confirm Bouquet</button>
+        </div>
+      </div>
+      <!-- This is where content from other templates will be inserted-->
+    </div>
+    <footer class="bg-light text-center py-4">
+      <p>&copy; </p>
+    </footer>
+  </body>
+</html>

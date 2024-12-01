@@ -1,0 +1,318 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Bouquet Builder
+    style.
+      /* Container Background & General Styling */
+      .container {
+        background: linear-gradient(to bottom right, #FFB6C1, #FFD700); /* Gradient from Pink to Yellow */
+        padding: 2rem 1rem; /* Vertical and horizontal padding */
+        border-radius: 1rem; /* Rounded corners for the container */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for the container */
+      }
+
+      /* General Page Font */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9; /* Soft background color for the page */
+      }
+
+      /* Header and Paragraph Styling */
+      h1, h2, h3 {
+        font-family: 'Arial', sans-serif;
+        color: #6B2C91; /* Dark purple for all headings */
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.125rem; /* Larger font size for readability */
+        color: #5A5A5A; /* Light gray for paragraph text */
+        margin-bottom: 1rem;
+      }
+
+      /* Input Fields Styling */
+      input[type="number"], select, .form-select, .form-input {
+        background-color: #fff; /* White background for inputs */
+        border: 2px solid #FFD700; /* Light yellow border for inputs */
+        border-radius: 8px; /* Rounded corners */
+        padding: 0.75rem 1rem;
+        transition: border-color 0.3s ease; /* Smooth transition for border on focus */
+        width: 100%; /* Ensure full width of inputs */
+      }
+
+      input[type="number"]:focus, select:focus, .form-select:focus, .form-input:focus {
+        border-color: #FF6347; /* Focus color change to pink */
+        outline: none; /* Remove default outline */
+      }
+
+      /* Label Styling */
+      label {
+        font-weight: bold;
+        color: #333; /* Dark text color for labels */
+      }
+
+      /* Custom Radio Buttons */
+      input[type="radio"] {
+        accent-color: #FFD700; /* Yellow accent color for radio buttons */
+        margin-right: 0.5rem; /* Space between radio buttons and label */
+      }
+
+      .radio-group label {
+        font-size: 1rem;
+        margin-right: 1rem;
+      }
+
+      /* Arrangement Selection - Flexbox Style */
+      .arrangement-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      /* Section Styling */
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section p {
+        font-size: 1.2rem;
+        color: #6B2C91; /* Purple color for section text */
+      }
+
+      /* Summary Section Styling */
+      #summary {
+        font-size: 1.125rem;
+        padding: 1rem;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      /* Total Price Styling */
+      #total-price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #FF6347; /* Redish-pink for price */
+      }
+
+      /* Button Styling */
+      .btn {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      /* Reset Button */
+      .btn-secondary {
+        background-color: #FFD700; /* Yellow */
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background-color: #FF6347; /* Pink on hover */
+      }
+
+      /* Confirm Button */
+      .btn-success {
+        background-color: #FF6347; /* Pink */
+        color: white;
+      }
+
+      .btn-success:hover {
+        background-color: #6B2C91; /* Dark purple on hover */
+      }
+
+      /* Flexbox for Buttons */
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .buttons {
+          flex-direction: column;
+        }
+
+        .section {
+          margin-bottom: 1rem;
+        }
+      }
+
+  body
+  
+    section.container.mx-auto.p-6.bg-white.shadow-lg.rounded-lg
+      h1.text-3xl.font-bold.text-center.mb-6 Bouquet Builder
+      p.text-lg.text-center.mb-4 Welcome to our bouquet generator! Design and customize your bouquets with ease.
+
+      // Flower Selection
+      .section.mb-6
+        label(for="flower-select" class="block text-xl font-medium") Select Flower:
+        select(id="flower-select" class="form-select mt-2 w-full p-3 border rounded-lg")
+          option(value="" disabled selected) Select a flower
+          option(value="Roses") Roses
+          option(value="Tulips") Tulips
+          option(value="Lilies") Lilies
+          option(value="Asiatic Lilies") Asiatic Lilies
+          option(value="Oriental Lilies") Oriental Lilies
+          option(value="Tiger Lilies") Tiger Lilies
+          option(value="Trumpet Lilies") Trumpet Lilies
+          option(value="Easter Lilies") Easter Lilies
+          option(value="Madonna Lilies") Madonna Lilies
+          option(value="Leopard Lilies") Leopard Lilies
+          option(value="Martagon Lilies") Martagon Lilies
+          option(value="Michigan Lilies") Michigan Lilies
+          option(value="Daisies") Daisies
+          option(value="Orchids") Orchids
+        p.scarcity-message(id="scarcity-message" style="display:none") Only a few left in stock!
+
+      // Quantity Selection
+      .section.mb-6
+        label(for="quantity" class="block text-xl font-medium") Quantity:
+        input(type="number" id="quantity" class="form-input mt-2 w-full p-3 border rounded-lg" min="1" placeholder="Enter quantity" aria-label="Enter flower quantity")
+
+      // Color Selection
+      .section.mb-6
+        p.text-xl.font-medium Select Color:
+        div#color-options.flex.items-center
+          div.radio-group
+            label(class="mr-6")
+              input(type="radio" name="color" value="Red" class="color-radio")
+              | Red
+            label(class="mr-6")
+              input(type="radio" name="color" value="White" class="color-radio")
+              | White
+            label(class="mr-6")
+              input(type="radio" name="color" value="Pink" class="color-radio")
+              | Pink
+            label(class="mr-6")
+              input(type="radio" name="color" value="Yellow" class="color-radio")
+              | Yellow
+            label(class="mr-6")
+              input(type="radio" name="color" value="Purple" class="color-radio")
+              | Purple
+
+      // Arrangement Selection
+      .section.mb-6
+        p.text-xl.font-medium Select Arrangement:
+        div#arrangement-options
+          div.arrangement-option.mb-4
+            label
+              input(type="radio" name="arrangement" value="Bouquet" class="arrangement-radio")
+              | Bouquet ($5)
+          div.arrangement-option.mb-4
+            label
+              input(type="radio" name="arrangement" value="Basket" class="arrangement-radio")
+              | Basket ($10)
+          div.arrangement-option.mb-4
+            label
+              input(type="radio" name="arrangement" value="Boxed Arrangement" class="arrangement-radio")
+              | Boxed Arrangement ($15)
+          div.arrangement-option.mb-4
+            label
+              input(type="radio" name="arrangement" value="Vase Arrangement" class="arrangement-radio")
+              | Vase Arrangement ($20)
+
+      // Summary
+      .section.mb-6
+        h3.text-2xl.font-semibold Bouquet Summary
+        div#summary.text-lg Your bouquet summary will appear here.
+        p.text-xl Total Price: $<span id="total-price">0</span>
+
+      // Buttons
+      .buttons.flex.justify-between.mt-6
+        button(id="reset" class="btn btn-secondary bg-gray-400 hover:bg-gray-500 text-white p-3 rounded-lg") Reset
+        button(id="confirm" class="btn btn-success bg-green-500 hover:bg-green-600 text-white p-3 rounded-lg") Confirm Bouquet
+
+  script.
+    const flowerSelect = document.getElementById('flower-select');
+    const quantityInput = document.getElementById('quantity');
+    const colorRadios = document.querySelectorAll('.color-radio');
+    const arrangementRadios = document.querySelectorAll('.arrangement-radio');
+    const summaryDiv = document.getElementById('summary');
+    const totalPriceSpan = document.getElementById('total-price');
+    const scarcityMessage = document.getElementById('scarcity-message');
+    const resetButton = document.getElementById('reset');
+    const confirmButton = document.getElementById('confirm');
+
+    let flowerPrice = 0;
+    let arrangementPrice = 0;
+    let quantity = 1;
+    let selectedFlower = '';
+
+    // Function to calculate the total price
+    function calculateTotal() {
+      let total = (flowerPrice + arrangementPrice) * quantity;
+      totalPriceSpan.textContent = total.toFixed(2);
+    }
+
+    // Update the summary
+    function updateSummary() {
+      let color = Array.from(colorRadios).find(r => r.checked)?.value || 'No color selected';
+      let arrangement = Array.from(arrangementRadios).find(r => r.checked)?.value || 'No arrangement selected';
+      
+      summaryDiv.innerHTML = `Flower: ${selectedFlower} <br> Color: ${color} <br> Arrangement: ${arrangement}`;
+      calculateTotal();
+    }
+
+    // Show scarcity message for specific flowers
+    function updateScarcityMessage() {
+      if (selectedFlower === 'Lilies' || selectedFlower === 'Tulips') {
+        scarcityMessage.style.display = 'block';
+        scarcityMessage.textContent = `Only a few ${selectedFlower} left in stock!`;
+      } else {
+        scarcityMessage.style.display = 'none';
+      }
+    }
+
+    // Event listeners for flower selection
+    flowerSelect.addEventListener('change', () => {
+      selectedFlower = flowerSelect.value;
+      flowerPrice = selectedFlower === 'Roses' ? 10 : 15;  // Example price logic
+      updateSummary();
+      updateScarcityMessage();
+    });
+
+    // Event listener for quantity input
+    quantityInput.addEventListener('input', (event) => {
+      quantity = parseInt(event.target.value) || 1;
+      calculateTotal();
+    });
+
+    // Event listener for arrangement selection
+    arrangementRadios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        arrangementPrice = radio.value === 'Bouquet' ? 5 :
+                           radio.value === 'Basket' ? 10 :
+                           radio.value === 'Boxed Arrangement' ? 15 : 20;
+        updateSummary();
+      });
+    });
+
+    // Reset button functionality
+    resetButton.addEventListener('click', () => {
+      flowerSelect.selectedIndex = 0;
+      quantityInput.value = 1;
+      colorRadios.forEach(radio => radio.checked = false);
+      arrangementRadios.forEach(radio => radio.checked = false);
+      totalPriceSpan.textContent = '0';
+      summaryDiv.innerHTML = 'Your bouquet summary will appear here.';
+      scarcityMessage.style.display = 'none';
+    });
+
+    // Confirm button functionality
+    confirmButton.addEventListener('click', () => {
+      alert(`Your bouquet has been confirmed! Total price: $${totalPriceSpan.textContent}`);
+    });
